@@ -559,7 +559,7 @@ const server = http.createServer(async (req, res) => {
             }
 
             const firestoreRes = await fetch(
-            `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/(default)/documents/chats/${chatId}/messages`,
+            `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/(default)/documents/chats/${chatId}/messages?orderBy=sentAt`,
             {
                 method: "GET",
                 headers: {
